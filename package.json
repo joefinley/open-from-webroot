@@ -12,33 +12,33 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.runInBrowser"
+    "onCommand:extension.openFromWebroot"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.runInBrowser",
-        "title": "Run in Browser"
+        "command": "extension.openFromWebroot",
+        "title": "Open from Webroot"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.runInBrowser",
+          "command": "extension.openFromWebroot",
           "group": "navigation"
         }
       ]
     },
     "configuration": {
-      "title": "Run in Browser",
+      "title": "Open from Webroot",
       "properties": {
-        "runInBrowser.host": {
+        "openFromWebroot.host": {
           "type": "string",
           "default": "127.0.0.1:8500",
           "description": "Host and port for the browser"
         },
-        "runInBrowser.webroot": {
+        "openFromWebroot.webroot": {
           "type": "string",
           "default": "",
           "description": "Web root directory path"

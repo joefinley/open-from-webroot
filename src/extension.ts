@@ -4,9 +4,9 @@ import open from 'open';
 
 export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerCommand(
-        'extension.runInBrowser', 
+        'extension.openFromWebroot',
         (uri: vscode.Uri) => {
-            const config = vscode.workspace.getConfiguration('runInBrowser');
+            const config = vscode.workspace.getConfiguration('openFromWebroot');
             const host = config.get<string>('host', '127.0.0.1:8500');
             const webroot = config.get<string>('webroot', '');
 
